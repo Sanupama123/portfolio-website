@@ -1,0 +1,1194 @@
+/* Main styles for Real Estate Management System */
+:root {
+    --primary-color: #1a73e8;
+    --primary-dark: #0d47a1;
+    --primary-light: #e8f0fe;
+    --secondary-color: #f8f9fa;
+    --text-color: #202124;
+    --text-light: #5f6368;
+    --border-color: #dadce0;
+    --success-color: #0f9d58;
+    --error-color: #d93025;
+    --warning-color: #fbbc05;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-outline {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #b7271f;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #0b8043;
+}
+
+/* Main Content Styles */
+main {
+    padding: 0 0 30px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 32px;
+    color: var(--primary-dark);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background-image: url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    color: white;
+    z-index: 1;
+}
+
+/* Remove the ::before pseudo-element that might be blocking the background */
+.hero::before {
+    display: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modern Search Box Styles */
+.search-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.search-box {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-box-main {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.search-icon {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 12px 0;
+    font-size: 16px;
+    color: var(--text-color);
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Search Filters */
+.search-filters {
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.filter-toggle {
+    padding: 15px 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.filter-toggle:hover {
+    background-color: #f0f0f0;
+}
+
+.expanded-filters {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
+    padding: 0 20px;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+.expanded-filters.active {
+    visibility: visible;
+    border-top: 1px solid #eaeaea;
+    padding: 15px;
+}
+
+/* Filter Grid and Select Styles */
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-item label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.select-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.select-wrapper select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select-wrapper select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+.select-wrapper i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    pointer-events: none;
+}
+
+/* Select grid for sort options */
+.select-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Input with currency symbol */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 12px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.input-wrapper .form-control {
+    padding-left: 25px;
+    width: 100%;
+}
+
+/* Range inputs */
+.range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.range-separator {
+    color: var(--text-light);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Filter action buttons */
+.filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #eaeaea;
+}
+
+.btn-reset {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-reset:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-apply {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-apply:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 100px 0;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .select-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-actions {
+        flex-direction: column;
+    }
+    
+    .filter-actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .user-actions {
+        margin-top: 15px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        flex: 100%;
+        margin-right: 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-actions {
+        flex-direction: column;
+    }
+    
+    .filter-actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+/* Error Message Styles */
+.error-message {
+    color: var(--error-color);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-control.error {
+    border-color: var(--error-color);
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--primary-light);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* Property Card Improved Styles */
+.property-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.05);
+}
+
+.property-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-status-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #777;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.favorite-button:hover {
+    transform: scale(1.1);
+    color: #ff4081;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-button.favorited i,
+.favorite-button i.fas {
+    color: #ff4081;
+}
+
+.property-details {
+    padding: 20px;
+}
+
+.property-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.property-card:hover .property-title {
+    color: var(--primary-color);
+}
+
+.property-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.property-location {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.property-location i {
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.property-features {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.property-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.property-features i {
+    color: var(--primary-dark);
+}
+
+.view-details {
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.view-details:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Filter rows for property-list.jsp page */
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.filters {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Form controls used across multiple pages */
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Property card styles used on property-list.jsp */
+.property-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.property-content {
+    padding: 15px;
+}
+
+.property-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.property-favorite:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.property-feature {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Fix property grid for property-list.jsp */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Additional property-list.jsp styles */
+.no-properties {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 18px;
+    color: var(--text-light);
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Property features for property-list.jsp */
+.property-features {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* Ensure the index page search filter styles don't override global .filter-item */
+.filter-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Specifically for index page's search filter */
+.search-container .filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Restore featured properties section styles */
+.featured-properties {
+    padding-top: 30px;
+}
+
+.property-slider {
+    position: relative;
+    overflow: hidden;
+    margin: 0 -10px;
+    padding: 0 10px;
+}
+
+/* Property navigation buttons */
+.property-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--text-color);
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.nav-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* View all properties link */
+.view-all {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Adjustments for property-list.jsp property cards */
+/* These styles override our enhanced styles for index.jsp to maintain property-list.jsp layout */
+.property-list-page .property-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-list-page .property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.property-list-page .property-content {
+    padding: 15px;
+}
+
+.property-list-page .property-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.property-list-page .property-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.property-list-page .property-location {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Add specific styling for the property feature in property-list.jsp */
+.property-list-page .property-features {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.property-list-page .property-feature {
+    display: flex;
+    align-items: center;
+}
+
+.property-list-page .property-feature i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+/* Service cards styling */
+.service-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: var(--text-light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #e1e1e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+/* Number inputs in filter */
+.range-inputs .form-control {
+    width: 100%;
+}
+
+/* Reviews Section Styles */
+.reviews {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.review-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.review-rating {
+    color: #FFC107;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.review-rating i {
+    margin-right: 3px;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 2px solid var(--primary-light);
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.author-info p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.review-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews {
+        padding: 40px 0;
+    }
+
+    .review-author {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .author-avatar {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
